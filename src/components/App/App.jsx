@@ -40,9 +40,9 @@ class App extends Component {
     );
   };
   deleteContact = contact => {
-    this.setState(prev => {
+    this.setState(prevState => {
       return {
-        contacts: prev.contacts.filter(ta => ta.id !== contact),
+        contacts: prevState.contacts.filter(el => el.id !== contact),
       };
     });
   };
