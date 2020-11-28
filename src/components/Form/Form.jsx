@@ -10,7 +10,7 @@ class Form extends Component {
     number: '',
   };
   inputChange = e => {
-    const { name, value } = e.currentTarget;
+    const { name, value } = e.target;
     this.setState({ [name]: value });
   };
   addContactItem = e => {

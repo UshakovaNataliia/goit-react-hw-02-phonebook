@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Filter = props => {
+const Filter = ({onFilter, filter}) => {
   return (
     <label>
       Find contacts by name
       <br/> 
-      <input type="text" name="filter" onChange={props.onFilter} />
+      <input type="text" value={filter} onChange={onFilter} />
     </label>
   );
 };

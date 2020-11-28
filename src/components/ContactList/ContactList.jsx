@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ContactList = props => {
-  const { onFilter, onDelete } = props;
+  const { toFilter, onDelete } = props;
 
   return (
     <ul>
-      {onFilter.map(el => {
+      {toFilter.map(el => {
         const { name, number, id } = el;
         return (
           <li key={id}>
@@ -25,7 +25,7 @@ const ContactList = props => {
 };
 
 ContactList.propTypes = {
-  onFilter: PropTypes.array.isRequired,
+  toFilter: PropTypes.array.isRequired,
   onDelete: PropTypes.func.isRequired,
 };
 
